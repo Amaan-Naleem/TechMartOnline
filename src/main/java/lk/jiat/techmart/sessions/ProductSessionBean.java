@@ -113,7 +113,7 @@ public class ProductSessionBean implements ProductService {
         }
     }
 
-    // 🔥 ADD THIS (VERY IMPORTANT)
+
     public List<Product> findAll() {
         return em.createQuery("SELECT p FROM Product p", Product.class)
                 .getResultList();

@@ -33,33 +33,45 @@
         <th>Action</th>
     </tr>
 
-    <%
-        // temporary simple list (we will improve later)
-        List<Product> list = (List<Product>) request.getAttribute("list");
+<%
+    List<Product> list = (List<Product>) request.getAttribute("list");
 
-        if (list != null) {
-            for (Product p : list) {
-    %>
+    if (list != null) {
+        for (Product p : list) {
+%>
 
     <tr>
         <td><%= p.getId() %></td>
         <td><%= p.getName() %></td>
         <td><%= p.getPrice() %></td>
-      <td><%= p.getStock_quantity() %></td>
+        <td><%= p.getStock_quantity() %></td>
 
         <td>
-            <form action="product" method="post">
+
+            <!-- DELETE -->
+            <form action="product" method="post" style="display:inline;">
                 <input type="hidden" name="action" value="delete"/>
                 <input type="hidden" name="id" value="<%= p.getId() %>"/>
                 <button>Delete</button>
             </form>
+
+
+            <form action="cart" method="post" style="display:inline;">
+                <input type="hidden" name="action" value="add"/>
+                <input type="hidden" name="productId" value="<%= p.getId() %>"/>
+                <input type="hidden" name="productName" value="<%= p.getName() %>"/>
+                <input type="hidden" name="price" value="<%= p.getPrice() %>"/>
+                <input type="number" name="qty" value="1" min="1"/>
+                <button>Add to Cart</button>
+            </form>
+
         </td>
     </tr>
 
-    <%
-            }
+<%
         }
-    %>
+    }
+%>
 
 </table>
 
