@@ -1,4 +1,4 @@
-package lk.jiat.techmart.session;
+package lk.jiat.techmart.sessions;
 
 import jakarta.ejb.Asynchronous;
 import jakarta.ejb.Singleton;
