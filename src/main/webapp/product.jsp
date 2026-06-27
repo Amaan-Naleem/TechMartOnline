@@ -55,13 +55,13 @@
                 <button>Delete</button>
             </form>
 
-
+            <!-- ADD TO CART -->
             <form action="cart" method="post" style="display:inline;">
                 <input type="hidden" name="action" value="add"/>
                 <input type="hidden" name="productId" value="<%= p.getId() %>"/>
                 <input type="hidden" name="productName" value="<%= p.getName() %>"/>
                 <input type="hidden" name="price" value="<%= p.getPrice() %>"/>
-                <input type="number" name="qty" value="1" min="1"/>
+                <input type="hidden" name="qty" value="1"/>
                 <button>Add to Cart</button>
             </form>
 
@@ -74,6 +74,13 @@
 %>
 
 </table>
+
+<br>
+
+<!-- CHECKOUT BUTTON -->
+<form action="checkout.jsp" method="get">
+    <button type="submit">Go to Checkout</button>
+</form>
 
 </body>
 </html>

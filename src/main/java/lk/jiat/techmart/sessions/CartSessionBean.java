@@ -34,4 +34,9 @@ public class CartSessionBean implements CartService {
             em.remove(item);
         }
     }
+
+    @Override
+    public void clearCart() {
+        em.createQuery("DELETE FROM CartItem").executeUpdate();
+    }
 }

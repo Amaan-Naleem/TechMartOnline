@@ -15,13 +15,22 @@
 <head>
     <title>Home</title>
 </head>
+
 <body>
 
 <h2>Welcome, <%= user.getUsername() %></h2>
 
 <p>You are logged in successfully.</p>
 
-<a href="logout.jsp">Logout</a>
+<br>
+
+<a href="product">Products</a> <br><br>
+<a href="cart">Cart</a> <br><br>
+<a href="checkout.jsp">Checkout</a> <br><br>
+
+<form action="logout" method="post">
+    <button type="submit">Logout</button>
+</form>
 
 </body>
 </html>
