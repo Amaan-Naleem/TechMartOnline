@@ -16,4 +16,6 @@ public class SystemConfigBean {
     public int getTotalOrders() {
         return totalOrders;
     }
+
+
 }
