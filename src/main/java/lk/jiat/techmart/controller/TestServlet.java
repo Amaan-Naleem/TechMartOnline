@@ -6,7 +6,7 @@ import jakarta.servlet.http.*;
 
 import java.io.IOException;
 
-@WebServlet("/test")
+@WebServlet("/testAmaan")
 public class TestServlet extends HttpServlet {
 
     @Override

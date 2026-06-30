@@ -5,11 +5,11 @@ import lk.jiat.techmart.entity.Product;
 import lk.jiat.techmart.entity.User;
 
 public interface OrderService {
-    void save(Orders order); // Use Orders, not Order
+    void save(Orders order);
 
     Orders findById(int id);
 
-    void update(Orders order); // Use Orders
+    void update(Orders order);
 
     void delete(int id);
 

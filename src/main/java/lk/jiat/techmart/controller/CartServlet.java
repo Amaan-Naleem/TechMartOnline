@@ -29,7 +29,6 @@ public class CartServlet extends HttpServlet {
 
             int productId = Integer.parseInt(req.getParameter("productId"));
 
-            // FIX: correct parameter name from JSP
             String name = req.getParameter("productName");
 
             double price = Double.parseDouble(req.getParameter("price"));

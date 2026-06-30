@@ -107,6 +107,10 @@ public class ProductSessionBean implements ProductService {
 
     @Override
     public void delete(int id) {
+        em.createQuery("DELETE FROM Order o WHERE o.product.id = :id")
+                .setParameter("id", id)
+                .executeUpdate();
+
         Product product = em.find(Product.class, id);
         if (product != null) {
             em.remove(product);
